@@ -24,22 +24,9 @@
     System.out.println(" \\ /\\ /\\ /\\ /\\ /\\ /");
     System.out.println("  v  v  v  v  v  v");
     System.out.println("It's my first year in Lehigh University and I have");
-    System.out.println("CSE2 this semester.");
+    System.out.println("CSE2 this semester."); 
     
 //test
 
-
-    
-
-
-
-
-
-
-
-    }
-
- }
- 
-         
-
+  }
+}
