@@ -1,11 +1,10 @@
-
+import java.util.Scanner;
 
 public class DD{
     public static void main(String[] args) {
-        float dd=(float)99.99 ;
-        float dd1=(float)00.01 ;
-        float dd2=dd1+dd ;
-        System.out.println("result=" +dd) ;
+        char aDD= (char) 32 ;
+        System.out.println(aDD);
+        
     } 
 }
 
