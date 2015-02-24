@@ -20,7 +20,6 @@ myScanner = new Scanner( System.in );
   System.out.print("Enter the number of Big Macs(an integer > 0): ");
   //accept user input of the number of BigMacs
   int nBigMacs = myScanner.nextInt();
-
   //prompt the user for the cost per Big Mac
   System.out.print("Enter the cost per Big Mac as"+" a double (in the form xx.xx): ");
   //accept user input of the cost per Big Mac

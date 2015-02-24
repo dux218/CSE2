@@ -16,7 +16,8 @@ if (input.hasNextInt()) {
     if (numberOfPeople>0) {
          //for number of cookies
          System.out.print("enter the number of cookies you are planning to buy :");
-         if (input.hasNextInt()) {
+         boolean inter=input.hasNextInt();
+         if (inter==true) {
             int numberOfCookies= input.nextInt();
             if(numberOfCookies>=0) {
                    //for number of  cookies each person have

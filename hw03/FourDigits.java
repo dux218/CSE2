@@ -47,7 +47,7 @@ if (nFourDecimalPoints<1000&& nFourDecimalPoints>99){
 if (nFourDecimalPoints<100&& nFourDecimalPoints>9){
     System.out.println("00"+nFourDecimalPoints) ;
 }
-if (nFourDecimalPoints<10&& nFourDecimalPoints>0){
+if (nFourDecimalPoints<10&& nFourDecimalPoints>=0){
     System.out.println("000"+nFourDecimalPoints);
 }
 
