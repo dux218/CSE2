@@ -2,11 +2,14 @@ import java.util.Scanner;
 
 public class DD{
     public static void main(String arg []) {
-if(3==3){
+        char ccc='a';
+       String aaa=""+ccc;
+       
+          System.out.println(aaa);
     
-}
-double yy=Math.nextUp(3.4);
-     System.out.println(yy);
+       }
+   }
+    
 
 
 
@@ -18,8 +21,8 @@ double yy=Math.nextUp(3.4);
 
 
 
-} 
-}
+
+
 
 
 
