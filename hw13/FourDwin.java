@@ -251,66 +251,98 @@ public class FourDwin{
         }
     }
 ///////////////////////////////////////////////////////////////////////////////////////
-    
+
 //3D sort method  using selection sort     
     
     public static double[][][] sort3DArray(double[][][] inputArray){
         
-        //get the number of element and the minimum element of the current array later compared to other arrays
         for(int i=0;i<inputArray.length;i++){
-            int currentSize=0;
-            double currentSmall=41;
             for(int j=0;j<inputArray[i].length;j++){
-                for(int m=0;m<inputArray[i][j].length;m++){
+                
+                for(int k=0;k<inputArray[i][j].length;k++){
+                    double currentSmall=inputArray[i][j][k];
+                    int index=k;
                     
-                        currentSize++;
-                        if (currentSmall>inputArray[i][j][m]){
+                    for(int m=k+1;m<inputArray[i][j].length;m++){
+                        if(currentSmall>inputArray[i][j][m]){
                             currentSmall=inputArray[i][j][m];
+                            index=m;
                         }
-                    
-                }
-            }
-            
-            
-            
-            //store the index and array of current array
-            int index=i; double[][]current2D=inputArray[i];
-            
-            //compare with array right to the current array and find the smallest array
-            for(int k=i+1;k<inputArray.length;k++){
-                
-                //find the number of elements and the minimum elements of each array
-                int nowSize=0;
-                double nowSmall=41;
-                for(int j=0;j<inputArray[k].length;j++){
-                    for(int m=0;m<inputArray[k][j].length;m++){
-                     
-                            nowSize++;
-                            if (nowSmall>inputArray[k][j][m]){
-                                nowSmall=inputArray[k][j][m];
-                            }
-                    
                     }
+                    double temp=inputArray[i][j][k];
+                    inputArray[i][j][k]=currentSmall;
+                    inputArray[i][j][index]=temp;
                 }
-                
-                //replace the current minimum array with the newest smaller array founded
-                if(nowSize<currentSize||(nowSize==currentSize&&nowSmall<currentSmall)){
-                    currentSize=nowSize;
-                    currentSmall=nowSmall;
-                    //replace the index with the index of the smaller array
-                    index=k;
-                }
-                
             }
-            //after finding the smallest array, change the position of it with the current one 
-            double[][]temp=inputArray[i];
-            inputArray[i]=inputArray[index];
-            inputArray[index]=temp;
-            
-            
         }
-        return inputArray;
-    }//find now small and current size
+       return inputArray;
+    }
+
+// 3D method before professor changed the assignment
+// keep just in case!
+
+
+
+
+// //3D sort method  using selection sort     
+    
+//     public static double[][][] sort3DArray(double[][][] inputArray){
+        
+//         //get the number of element and the minimum element of the current array later compared to other arrays
+//         for(int i=0;i<inputArray.length;i++){
+//             int currentSize=0;
+//             double currentSmall=41;
+//             for(int j=0;j<inputArray[i].length;j++){
+//                 for(int m=0;m<inputArray[i][j].length;m++){
+                    
+//                         currentSize++;
+//                         if (currentSmall>inputArray[i][j][m]){
+//                             currentSmall=inputArray[i][j][m];
+//                         }
+                    
+//                 }
+//             }
+            
+            
+            
+//             //store the index and array of current array
+//             int index=i; double[][]current2D=inputArray[i];
+            
+//             //compare with array right to the current array and find the smallest array
+//             for(int k=i+1;k<inputArray.length;k++){
+                
+//                 //find the number of elements and the minimum elements of each array
+//                 int nowSize=0;
+//                 double nowSmall=41;
+//                 for(int j=0;j<inputArray[k].length;j++){
+//                     for(int m=0;m<inputArray[k][j].length;m++){
+                     
+//                             nowSize++;
+//                             if (nowSmall>inputArray[k][j][m]){
+//                                 nowSmall=inputArray[k][j][m];
+//                             }
+                    
+//                     }
+//                 }
+                
+//                 //replace the current minimum array with the newest smaller array founded
+//                 if(nowSize<currentSize||(nowSize==currentSize&&nowSmall<currentSmall)){
+//                     currentSize=nowSize;
+//                     currentSmall=nowSmall;
+//                     //replace the index with the index of the smaller array
+//                     index=k;
+//                 }
+                
+//             }
+//             //after finding the smallest array, change the position of it with the current one 
+//             double[][]temp=inputArray[i];
+//             inputArray[i]=inputArray[index];
+//             inputArray[index]=temp;
+            
+            
+//         }
+//         return inputArray;
+//     }//find now small and current size
 
 
 }//public class ended
