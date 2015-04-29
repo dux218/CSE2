@@ -83,10 +83,7 @@ public class FourDwin{
         //sort the 4D array first
         array=sort4DArray(array);
         
-        //sort each of the three 3D array
-        array[0]=sort3DArray(array[0]);
-        array[1]=sort3DArray(array[1]);
-        array[2]=sort3DArray(array[2]);
+        
         
         //print
         printArray(array);
@@ -195,6 +192,13 @@ public class FourDwin{
             }
             //insert the current 3D array in the position of k+1
             inputArray[k+1]=current3D;
+            
+            
+            //insert 3D sort method
+            inputArray[0]=sort3DArray(inputArray[0]);
+            inputArray[1]=sort3DArray(inputArray[1]);
+            inputArray[2]=sort3DArray(inputArray[2]);
+            
             
         }
         return inputArray;
